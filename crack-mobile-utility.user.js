@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         📱 Crack Mobile Utility (모바일 유틸 합본)
 // @namespace    crack-mobile-utility
-// @version      4.11.5-pinset.9-scroll.4-menu.5-advisor.4-modelselect
+// @version      4.11.5-pinset.9-scroll.4-menu.5-advisor.6-pendingfix
 // @description  4.11.4: 채팅목록 최근 대화순 정렬, 카드 전체 색 배경·테두리, 답변 완료 시 최근 대화 시각 반영. 4.11.2: 다른 버튼을 가리던 채팅목록 플로팅 버튼 제거, 톱니바퀴 설정 → 채팅 목록에서만 열기. 4.11.1: 답변 완성 때 자동 스크롤 막기(PC 상태 제어 방식), 전송·맨 아래 버튼 잠시 허용, 방 이동/해제 시 원복. 4.11.0: 모바일 채팅 한눈에 보기·검색·색·보관함 이동/정리·갈래 기록/지도, 40개씩 표시·보관함 지연 조회·닫을 때 읽기 중단. 4.10.0: 모바일 알림 탭(답변 완성·소리·요약 업데이트·크랙 새 알림·출석·설정 변경), 기존 통신 감시 재사용·추가 폴링 없음. 4.9.3: 크랙 모델 정보에 아르곤이 누락돼도 라디오존데 설정·조회 목록에 G4A 유지. 4.9.2: 라디오존데 아르곤(G4A) 추가, 최신 statistics 모델 목록 조회, 알려진 모델의 과거 실패 캐시 우선순위 수정. 4.9.1: 소설/채팅 전환을 새로고침 없이 바로(PC 합본과 같은 방식, 저장 실패 때는 되돌림), 로그 캡처 글 폭 넓힘(설정 '글 폭' 좁게·보통·넓게, 기본 480), 문단 앞 −·이름표 옆 × 로 빼고 + 로 되살리기, 미리보기·결과 화면이 상하좌우로 밀리거나 확대되던 것 잠금. 4.9.0: 로그 캡처 새로 짬 — 마지막 턴·최근 3턴·범위·유저 제외로 고르기, 미리보기가 곧 결과(문단·이름표 눌러 빼기·되돌리기·쪽 나뉨 점선), 나눠서(1080px 여러 장) 또는 한 장(아이폰 한도보다 길면 토막으로 그려 PNG 하나로 이어 붙임), 아이폰은 공유 창으로 사진 앱에 바로 저장, PNG·WebP, 테마 5개 다듬음(성좌 새 장식·스펙시트 여백), 외부 라이브러리 없이 직접 그림, 카메라 아이콘 새로. 4.8.0: 긴 방 가볍게 — 오래된 대화 숨기기(남길 최근 대화 턴 수)·화면 밖 메시지 그리기 생략(PC 합본에서 옮김, 접기·펼치기는 손을 떼고 멈췄을 때만·보던 자리 유지). 4.7.0: 라존데를 크랙 모델과 겹치는 모델만·크랙 순서·크랙 아이콘으로(양쪽 새 모델 자동), 울트라챗 등 새 모델 아이콘 '?'·모델 숨기기 창 중복 수정, 보낸 뒤·탭 다녀온 뒤 테마 풀림 수정, 미니사이드바 모델 그림 크기, 모델 버튼 자리 계정별(입력창 오른쪽·왼쪽·방 위쪽 바) 대응, 라존데 요청 줄이기(묶음 20개). 4.6.3: 미니사이드바 모델 버튼에 지금 모델 이미지 표시. 4.6.2: 10/13 크랙 개편 대응(모델 버튼이 전송 버튼 옆으로 이동 — 미니사이드바 모델 버튼을 켜면 원래 버튼은 숨김, 로어 버튼 자리), 라디오존데를 한 번에 받기(모델마다 따로 묻지 않음). 4.6.1: 최신 메시지 기준 초안 전송 확인, 완료·삭제 배지 부분 갱신, 대시보드 중복 DOM 교체 감소. 4.6.0: 9/30 크랙 개편 대응(분기 방 배지·전송 감지·초안 정리·캐릭터 채팅·유저노트 길게 눌러 선택), 긴 방·홈·방 이동 반복 작업과 메모리 누수 최적화, 라디오존데 복구(CDN 직접 조회·신규 모델 자동 추가·GM.xmlHttpRequest 호환)와 줄 간격 고정, 미니사이드바 문체 변경, 정보바 숫자 애니메이션, 전체화면·입력창 펼치기 SVG 아이콘. 허브 SVG 복원, 모델 맨 왼쪽 배치 및 전환 버튼 간격 수정. 미니사이드바 다크/라이트·소설/채팅 전환. 코드블록 자동 줄바꿈, 라이트 테마 코드·보조 글자 대비 수정, 테마 판별 통일, DOM·캐시·라디오존데 반복 처리 최적화. 모바일용 합본: 입력창 설정·초안 자동 저장·입력 글자수 카운터·우측 상단 펼치기 버튼, 상단바 접기, 빈 전송 방지, 엔딩 버튼 숨김, 와이드뷰, 글씨/이미지 크기, 썸네일 움짤 정지, 라디오존데 인라인, 대시보드 원본식 정보바/미니사이드바(게임 HUD·모바일 삽화·Wish RP Manager 바로가기 포함), 글자수·시간 배지·답변별 모델·실측 크래커, 메시지 길게 누르기 메뉴, 로그 캡처, 외부 테마 자동 공존
 // @author       Assistant
 // @downloadURL  https://raw.githubusercontent.com/ho4690-eng/crack-mobile-utility/main/crack-mobile-utility.user.js
@@ -37,7 +37,7 @@
 
 (() => {
     'use strict';
-    const VERSION = '4.11.5-pinset.9-scroll.4-menu.5-gpt.2';
+    const VERSION = '4.11.5-pinset.9-scroll.4-menu.5-gpt.4-pendingfix';
     const CMU_RUNTIME_ATTR = 'data-cmu-runtime-version';
     const CMU_RUNTIME_KEY = '__CRACK_MOBILE_UTILITY_RUNTIME__';
     const runtimeRoot = document.documentElement;
@@ -22950,10 +22950,77 @@ textarea:focus{background:var(--surface-2);box-shadow:inset 0 0 0 1.5px var(--pi
     let advisorBusy=false,advisorOverlay=null,advisorCancelled=false;
     const advisorRoom=()=>getChatId()||'';
     const advisorLogKey=id=>'cmu_gpt_qa_'+id;
-    const advisorLoadLog=id=>{try{const x=JSON.parse(localStorage.getItem(advisorLogKey(id))||'[]');return Array.isArray(x)?x:[];}catch(_){return [];}};
-    const advisorSaveLog=(id,arr)=>{try{localStorage.setItem(advisorLogKey(id),JSON.stringify(arr.slice(-16)));}catch(_){}};
-    const advisorPending=()=>{try{return JSON.parse(localStorage.getItem(CMU_ADVISOR_PENDING)||'null');}catch(_){return null;}};
-    const advisorSetPending=x=>{try{if(x)localStorage.setItem(CMU_ADVISOR_PENDING,JSON.stringify(x));else localStorage.removeItem(CMU_ADVISOR_PENDING);}catch(_){}};
+    // Keep the latest reply visible even when browser localStorage is full.
+    // A session fallback survives refresh within the same tab; memory fallback lasts until navigation.
+    const advisorVolatileLog=new Map();
+    const advisorLoadLog=id=>{
+      if(advisorVolatileLog.has(id))return advisorVolatileLog.get(id);
+      for(const storage of [sessionStorage,localStorage]){
+        try{const raw=storage.getItem(advisorLogKey(id));if(raw){const x=JSON.parse(raw);if(Array.isArray(x))return x;}}catch(_){}
+      }
+      return [];
+    };
+    const advisorSaveLog=(id,arr)=>{
+      const key=advisorLogKey(id);
+      // If quota is tight, discard older Q&A before discarding the new answer.
+      for(const count of [16,12,8,4,2]){
+        const recent=arr.slice(-count);
+        try{
+          localStorage.setItem(key,JSON.stringify(recent));
+          try{sessionStorage.removeItem(key);}catch(_){}
+          advisorVolatileLog.delete(id);
+          return {where:'local',trimmed:count<16};
+        }catch(_){}
+      }
+      const recent=arr.slice(-16);
+      try{
+        sessionStorage.setItem(key,JSON.stringify(recent));
+        advisorVolatileLog.delete(id);
+        return {where:'session',trimmed:false};
+      }catch(_){}
+      advisorVolatileLog.set(id,recent);
+      return {where:'memory',trimmed:false};
+    };
+    // The request id must survive a refresh BEFORE submitting a Termux job.
+    // localStorage quota is shared with other scripts on crack.wrtn.ai; fall back to
+    // this tab's sessionStorage without touching any RP or cumulative-stat keys.
+    const advisorPending=()=>{
+      for(const storage of [localStorage,sessionStorage]){
+        try{
+          const raw=storage.getItem(CMU_ADVISOR_PENDING);
+          if(!raw)continue;
+          const x=JSON.parse(raw);
+          if(x&&x.request_id&&x.roomId)return x;
+        }catch(_){}
+      }
+      return null;
+    };
+    const advisorSetPending=x=>{
+      if(!x){
+        let ok=false;
+        for(const storage of [localStorage,sessionStorage]){
+          try{storage.removeItem(CMU_ADVISOR_PENDING);ok=true;}catch(e){console.warn('[CMU advisor] pending cleanup failed',e);}
+        }
+        return ok;
+      }
+      const value=JSON.stringify(x);
+      for(const storage of [localStorage,sessionStorage]){
+        try{
+          storage.setItem(CMU_ADVISOR_PENDING,value);
+          if(storage===localStorage){
+            try{sessionStorage.removeItem(CMU_ADVISOR_PENDING);}catch(_){}
+          }
+          // Verify persistence before allowing the external POST.
+          if(storage.getItem(CMU_ADVISOR_PENDING)===value)return true;
+        }catch(e){console.warn('[CMU advisor] pending save unavailable; trying fallback',e);}
+      }
+      return false;
+    };
+    const advisorSavedStatus=save=>save.where==='memory'
+      ?'⚠ 답변 표시됨 · 브라우저 저장 공간 부족으로 새로고침하면 사라질 수 있어요. 내용을 복사해 두세요.'
+      :save.where==='session'
+        ?'⚠ 답변 표시됨 · 영구 저장 실패, 현재 탭에만 임시 보관됨. 필요하면 복사해 두세요.'
+        :save.trimmed?'✅ 답변 완료 · 저장 공간 부족으로 오래된 상담 일부를 줄였어요.':'답변 완료';
     function advisorParseConnection(){
       const raw=String(advisorCfg.connection||'').trim(),u=new URL(raw),pair=new URLSearchParams(u.hash.slice(1)).get('pair')||'';
       if(u.protocol!=='http:'||u.hostname!=='127.0.0.1'||!u.port||u.pathname!=='/'||u.search||!/^[A-Za-z0-9_-]{32,}$/.test(pair))throw Error('Termux 연결 주소 전체(http://127.0.0.1:포트/#pair=...)를 설정에 입력해 주세요.');
@@ -23086,8 +23153,8 @@ textarea:focus{background:var(--surface-2);box-shadow:inset 0 0 0 1.5px var(--pi
           advisorStatus((advisorCfg.provider==='firebase'?'Firebase':'AI Studio')+' 응답 생성 중…');
           const answer=await advisorProviderAsk(`${context}\n\n[이전 상담 대화]\n${history||'(없음)'}\n\n[이번 질문]\n${question}`);
           if(advisorRoom()!==id||advisorCancelled)throw Error('화면을 닫았거나 방이 바뀌어 답변을 저장하지 않았습니다.');
-          const log=advisorLoadLog(id);log.push({role:'user',text:question},{role:'assistant',text:answer});advisorSaveLog(id,log);
-          advisorDrawLog();advisorStatus('답변 완료');return;
+          const log=advisorLoadLog(id);log.push({role:'user',text:question},{role:'assistant',text:answer});const saved=advisorSaveLog(id,log);
+          advisorDrawLog();advisorStatus(advisorSavedStatus(saved));return;
         }
         let pending=advisorPending(),job;
         if(pending){
@@ -23105,7 +23172,7 @@ textarea:focus{background:var(--surface-2);box-shadow:inset 0 0 0 1.5px var(--pi
           const history=advisorLoadLog(id).slice(-8).map(x=>`${x.role==='user'?'질문':'답변'}: ${String(x.text).slice(0,2800)}`).join('\n\n');
           pending={request_id:crypto.randomUUID(),base:c.base,roomId:id,question,created:Date.now()};
           // Store before POST to prevent duplicates on lost connections.
-          advisorSetPending(pending);advisorStatus('Termux에 질문 접수 중…');
+          if(!advisorSetPending(pending))throw Error('브라우저의 영구·임시 저장소 모두 요청 번호를 저장하지 못했습니다. 작업이 유실되지 않도록 전송하지 않았습니다.');advisorStatus('Termux에 질문 접수 중…');
           job=await advisorRequest(c.base,c.pair,'POST','/api/jobs',{request_id:pending.request_id,model:advisorCfg.model,effort:advisorCfg.effort,instructions:advisorInstruction,input:`${context}\n\n[이전 상담 대화]\n${history||'(없음)'}\n\n[이번 질문]\n${question}`});
         }
         const started=Date.now();
@@ -23117,8 +23184,8 @@ textarea:focus{background:var(--surface-2);box-shadow:inset 0 0 0 1.5px var(--pi
           job=await advisorRequest(c.base,c.pair,'GET','/api/jobs/'+encodeURIComponent(pending.request_id));
         }
         if(job.status==='completed'&&String(job.text||'').trim()){
-          const log=advisorLoadLog(id);log.push({role:'user',text:pending.question},{role:'assistant',text:String(job.text)});advisorSaveLog(id,log);
-          advisorSetPending(null);advisorDrawLog();advisorStatus('답변 완료');
+          const log=advisorLoadLog(id);log.push({role:'user',text:pending.question},{role:'assistant',text:String(job.text)});const saved=advisorSaveLog(id,log);
+          if(saved.where!=='memory')advisorSetPending(null);advisorDrawLog();advisorStatus(advisorSavedStatus(saved));
         }else if(['error','incomplete','refusal','blocked_budget','partial_text'].includes(job.status)){
           advisorSetPending(null);throw Error('Termux 작업 실패: '+(job.error_code||job.status));
         }else throw Error('미확인 상태: '+String(job.status));
@@ -23152,14 +23219,14 @@ textarea:focus{background:var(--surface-2);box-shadow:inset 0 0 0 1.5px var(--pi
       q('[data-gpt-config-btn]').onclick=()=>q('[data-gpt-config]').classList.toggle('open');
       q('[data-gpt-question]').onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();q('[data-gpt-send]').click();}};
       shade.querySelectorAll('[data-gpt-quick]').forEach(btn=>btn.onclick=()=>{q('[data-gpt-question]').value=btn.dataset.gptQuick;q('[data-gpt-send]').click();});
-      q('[data-gpt-send]').onclick=()=>{const t=q('[data-gpt-question]').value.trim();if(t){q('[data-gpt-question]').value='';advisorAsk(t);}};
+      q('[data-gpt-send]').onclick=()=>{if(advisorBusy)return;const t=q('[data-gpt-question]').value.trim();if(t){q('[data-gpt-question]').value='';advisorAsk(t);}};
       q('[data-gpt-recover]').onclick=()=>advisorAsk(advisorPending()?.question||'',true);
       q('[data-gpt-test]').onclick=async()=>{const btn=q('[data-gpt-test]');if(advisorBusy)return;btn.disabled=true;advisorStatus('연결 확인 중…');try{
         if(advisorCfg.provider==='termux'){const c=advisorParseConnection();const data=await advisorRequest(c.base,c.pair,'GET','/api/status');advisorStatus('✅ Termux 응답 정상'+(data.paused?' · 현재 일시정지됨':''));}
         else{const text=await advisorProviderAsk('연결 테스트입니다. OK라고만 답하세요.');advisorStatus('✅ '+(advisorCfg.provider==='firebase'?'Firebase':'AI Studio')+' 응답: '+text.slice(0,90));}
       }catch(e){advisorStatus('⚠ '+e.message);}finally{btn.disabled=false;}};
       q('[data-gpt-reset]').onclick=()=>{if(advisorBusy){advisorStatus('작업 확인 중에는 번호를 정리할 수 없습니다.');return;}const pending=advisorPending();if(!pending){advisorStatus('미확인 작업 번호가 없습니다.');return;}if(confirm('미확인 요청 번호만 삭제합니다. 서버 작업은 취소되지 않고 결과를 회수할 수 없게 될 수 있습니다. 정말 정리할까요?')){advisorSetPending(null);advisorStatus('요청 번호만 정리했습니다. 이제 새 질문을 보낼 수 있어요.');}};
-      q('[data-gpt-clear]').onclick=()=>{if(confirm('이 채팅방의 GPT 상담 기록을 삭제할까요?')){localStorage.removeItem(advisorLogKey(advisorRoom()));advisorDrawLog();}};
+      q('[data-gpt-clear]').onclick=()=>{if(confirm('이 채팅방의 GPT 상담 기록을 삭제할까요?')){localStorage.removeItem(advisorLogKey(advisorRoom()));try{sessionStorage.removeItem(advisorLogKey(advisorRoom()));}catch(_){}advisorVolatileLog.delete(advisorRoom());advisorDrawLog();}};
       q('[data-gpt-provider]').value=advisorCfg.provider||'termux';
       const geminiSelect=q('[data-gpt-gemini-model]'),geminiCustom=q('[data-gpt-gemini-custom]'),geminiCustomWrap=q('[data-gpt-custom-wrap]');
       geminiSelect.innerHTML=advisorGeminiOptions.map(([id,label])=>`<option value='${escapeHtml(id)}'>${escapeHtml(label)}</option>`).join('')+"<option value='__custom__'>✏️ 직접 입력 (기타 모델 ID)</option>";
