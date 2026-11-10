@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         📱 Crack Mobile Utility (모바일 유틸 합본)
 // @namespace    crack-mobile-utility
-// @version      4.11.5-pinset.9-scroll.4-menu.5-advisor.6-pendingfix
+// @version      4.11.7
 // @description  4.11.4: 채팅목록 최근 대화순 정렬, 카드 전체 색 배경·테두리, 답변 완료 시 최근 대화 시각 반영. 4.11.2: 다른 버튼을 가리던 채팅목록 플로팅 버튼 제거, 톱니바퀴 설정 → 채팅 목록에서만 열기. 4.11.1: 답변 완성 때 자동 스크롤 막기(PC 상태 제어 방식), 전송·맨 아래 버튼 잠시 허용, 방 이동/해제 시 원복. 4.11.0: 모바일 채팅 한눈에 보기·검색·색·보관함 이동/정리·갈래 기록/지도, 40개씩 표시·보관함 지연 조회·닫을 때 읽기 중단. 4.10.0: 모바일 알림 탭(답변 완성·소리·요약 업데이트·크랙 새 알림·출석·설정 변경), 기존 통신 감시 재사용·추가 폴링 없음. 4.9.3: 크랙 모델 정보에 아르곤이 누락돼도 라디오존데 설정·조회 목록에 G4A 유지. 4.9.2: 라디오존데 아르곤(G4A) 추가, 최신 statistics 모델 목록 조회, 알려진 모델의 과거 실패 캐시 우선순위 수정. 4.9.1: 소설/채팅 전환을 새로고침 없이 바로(PC 합본과 같은 방식, 저장 실패 때는 되돌림), 로그 캡처 글 폭 넓힘(설정 '글 폭' 좁게·보통·넓게, 기본 480), 문단 앞 −·이름표 옆 × 로 빼고 + 로 되살리기, 미리보기·결과 화면이 상하좌우로 밀리거나 확대되던 것 잠금. 4.9.0: 로그 캡처 새로 짬 — 마지막 턴·최근 3턴·범위·유저 제외로 고르기, 미리보기가 곧 결과(문단·이름표 눌러 빼기·되돌리기·쪽 나뉨 점선), 나눠서(1080px 여러 장) 또는 한 장(아이폰 한도보다 길면 토막으로 그려 PNG 하나로 이어 붙임), 아이폰은 공유 창으로 사진 앱에 바로 저장, PNG·WebP, 테마 5개 다듬음(성좌 새 장식·스펙시트 여백), 외부 라이브러리 없이 직접 그림, 카메라 아이콘 새로. 4.8.0: 긴 방 가볍게 — 오래된 대화 숨기기(남길 최근 대화 턴 수)·화면 밖 메시지 그리기 생략(PC 합본에서 옮김, 접기·펼치기는 손을 떼고 멈췄을 때만·보던 자리 유지). 4.7.0: 라존데를 크랙 모델과 겹치는 모델만·크랙 순서·크랙 아이콘으로(양쪽 새 모델 자동), 울트라챗 등 새 모델 아이콘 '?'·모델 숨기기 창 중복 수정, 보낸 뒤·탭 다녀온 뒤 테마 풀림 수정, 미니사이드바 모델 그림 크기, 모델 버튼 자리 계정별(입력창 오른쪽·왼쪽·방 위쪽 바) 대응, 라존데 요청 줄이기(묶음 20개). 4.6.3: 미니사이드바 모델 버튼에 지금 모델 이미지 표시. 4.6.2: 10/13 크랙 개편 대응(모델 버튼이 전송 버튼 옆으로 이동 — 미니사이드바 모델 버튼을 켜면 원래 버튼은 숨김, 로어 버튼 자리), 라디오존데를 한 번에 받기(모델마다 따로 묻지 않음). 4.6.1: 최신 메시지 기준 초안 전송 확인, 완료·삭제 배지 부분 갱신, 대시보드 중복 DOM 교체 감소. 4.6.0: 9/30 크랙 개편 대응(분기 방 배지·전송 감지·초안 정리·캐릭터 채팅·유저노트 길게 눌러 선택), 긴 방·홈·방 이동 반복 작업과 메모리 누수 최적화, 라디오존데 복구(CDN 직접 조회·신규 모델 자동 추가·GM.xmlHttpRequest 호환)와 줄 간격 고정, 미니사이드바 문체 변경, 정보바 숫자 애니메이션, 전체화면·입력창 펼치기 SVG 아이콘. 허브 SVG 복원, 모델 맨 왼쪽 배치 및 전환 버튼 간격 수정. 미니사이드바 다크/라이트·소설/채팅 전환. 코드블록 자동 줄바꿈, 라이트 테마 코드·보조 글자 대비 수정, 테마 판별 통일, DOM·캐시·라디오존데 반복 처리 최적화. 모바일용 합본: 입력창 설정·초안 자동 저장·입력 글자수 카운터·우측 상단 펼치기 버튼, 상단바 접기, 빈 전송 방지, 엔딩 버튼 숨김, 와이드뷰, 글씨/이미지 크기, 썸네일 움짤 정지, 라디오존데 인라인, 대시보드 원본식 정보바/미니사이드바(게임 HUD·모바일 삽화·Wish RP Manager 바로가기 포함), 글자수·시간 배지·답변별 모델·실측 크래커, 메시지 길게 누르기 메뉴, 로그 캡처, 외부 테마 자동 공존
 // @author       Assistant
-// @downloadURL  https://raw.githubusercontent.com/ho4690-eng/crack-mobile-utility/main/crack-mobile-utility.user.js
-// @updateURL    https://raw.githubusercontent.com/ho4690-eng/crack-mobile-utility/main/crack-mobile-utility.user.js
+// @downloadURL  (local experimental build)
+// @updateURL    (local experimental build)
 // @match        *://crack.wrtn.ai/*
 // @run-at       document-idle
 // @grant        GM_addStyle
@@ -37,7 +37,7 @@
 
 (() => {
     'use strict';
-    const VERSION = '4.11.5-pinset.9-scroll.4-menu.5-gpt.4-pendingfix';
+    const VERSION = '4.11.7';
     const CMU_RUNTIME_ATTR = 'data-cmu-runtime-version';
     const CMU_RUNTIME_KEY = '__CRACK_MOBILE_UTILITY_RUNTIME__';
     const runtimeRoot = document.documentElement;
@@ -9961,13 +9961,46 @@
         let button = document.getElementById('cmu-attend');
         if (!cmuNoteOn('Attend') || st.status !== 'NOT_ATTENDED') { button?.remove(); return; }
         if (!document.body) return;
+        if (!document.getElementById('cmu-attend-attention-style')) {
+            const style = document.createElement('style');
+            style.id = 'cmu-attend-attention-style';
+            style.textContent = `
+                #cmu-attend{position:fixed;top:calc(env(safe-area-inset-top,0px) + 68px);left:50%;transform:translateX(-50%);width:min(390px,calc(100vw - 28px));max-width:calc(100vw - 28px);z-index:2147483645;box-sizing:border-box;display:flex;flex-direction:column;gap:11px;padding:14px;border:1px solid #7662bc;border-radius:18px;background:#161422;color:#e8dcff;text-align:left;font-family:system-ui,sans-serif;box-shadow:0 12px 36px #0009,0 0 0 1px #7662bc22;cursor:pointer;touch-action:manipulation;animation:cmu-attend-pop .48s ease-out both,cmu-attend-glow 1.15s ease-in-out 3 .48s}
+                #cmu-attend .cmu-attend-head{display:flex;align-items:center;gap:11px;min-width:0;width:100%}
+                #cmu-attend .cmu-attend-icon{display:flex;align-items:center;justify-content:center;width:45px;height:45px;flex:none;border-radius:13px;background:#403064;color:#d5b7ff;font-size:24px;line-height:1}
+                #cmu-attend .cmu-attend-main{display:flex;flex:1;flex-direction:column;gap:3px;min-width:0}
+                #cmu-attend .cmu-attend-title{font:750 14px/1.4 system-ui;color:#e2caff;letter-spacing:-.25px}
+                #cmu-attend .cmu-attend-sub{font:500 12px/1.45 system-ui;color:#b9aaca}
+                #cmu-attend .cmu-attend-arrow{font:700 23px/1 system-ui;color:#cbb1ff;flex:none}
+                #cmu-attend .cmu-attend-cta{display:block;width:100%;box-sizing:border-box;border-radius:10px;padding:10px 12px;background:#7850c8;color:#fff;font:700 13px/1.3 system-ui;text-align:center}
+                #cmu-attend:active{filter:brightness(.92)}
+                #cmu-attend:disabled{cursor:wait;opacity:.82;animation:none}
+                @keyframes cmu-attend-pop{0%{opacity:0;transform:translate(-50%,-10px) scale(.96)}70%{opacity:1;transform:translate(-50%,1px) scale(1.01)}100%{opacity:1;transform:translate(-50%,0) scale(1)}}
+                @keyframes cmu-attend-glow{0%,100%{box-shadow:0 12px 36px #0009,0 0 0 1px #7662bc33}50%{box-shadow:0 12px 36px #0009,0 0 0 3px #b69aff88,0 0 24px #9871fa66}}
+                @media(prefers-reduced-motion:reduce){#cmu-attend{animation:none}}
+            `;
+            (document.head || document.documentElement).appendChild(style);
+        }
         if (!button) {
             button = document.createElement('button'); button.id = 'cmu-attend'; button.type = 'button';
-            button.style.cssText = 'position:fixed;right:12px;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:2147483645;border:1px solid #8885;border-radius:20px;background:#252831;color:white;padding:10px 14px;font:600 13px system-ui;box-shadow:0 2px 10px #0002';
-            button.onclick = cmuNoteAttendNow; document.body.appendChild(button);
+            button.onclick = cmuNoteAttendNow;
+            document.body.appendChild(button);
         }
-        const label = st.busy ? '출석 중…' : '출석하기';
-        if (button.textContent !== label) button.textContent = label;
+        const label = st.busy ? '출석 처리 중…' : '오늘의 출석 보상이 기다려!';
+        const sub = st.busy ? '출석 상태를 확인하고 있어요' : '아직 출석 전 · 크래딧 챙기기';
+        if (button.dataset.attendLabel !== label) {
+            button.dataset.attendLabel = label;
+            button.replaceChildren();
+            const head = document.createElement('span'); head.className = 'cmu-attend-head';
+            const icon = document.createElement('span'); icon.className = 'cmu-attend-icon'; icon.textContent = st.busy ? '⏳' : '🎁';
+            const main = document.createElement('span'); main.className = 'cmu-attend-main';
+            const title = document.createElement('span'); title.className = 'cmu-attend-title'; title.textContent = label;
+            const detail = document.createElement('span'); detail.className = 'cmu-attend-sub'; detail.textContent = sub;
+            const arrow = document.createElement('span'); arrow.className = 'cmu-attend-arrow'; arrow.textContent = '›'; arrow.setAttribute('aria-hidden', 'true');
+            main.append(title, detail); head.append(icon, main, arrow);
+            const cta = document.createElement('span'); cta.className = 'cmu-attend-cta'; cta.textContent = st.busy ? '출석 확인 중…' : '출석하고 보상 받기';
+            button.append(head, cta);
+        }
         if (button.disabled !== st.busy) button.disabled = st.busy;
     }
     async function cmuNoteAttendNow() {
